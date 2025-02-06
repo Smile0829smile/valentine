@@ -36,11 +36,13 @@
                 idTxt.innerHTML = "Error 1038<br>I wish you loved me TT"
                 no++
             }
-            else if(no >= 15){
+            else if(no == 15){
                 idTxt.innerHTML = "Error 607<br>Bye Bye."
+                no++
+            }
+            else if(no == 16){
                 idMain.innerHTML = "";
                 document.body.style.backgroundColor = "black"
-                no++
             }
             console.log(no)
         }
