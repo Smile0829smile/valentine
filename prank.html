@@ -2,36 +2,15 @@
 <html lang="en">
 <head>
     <title>Valentine xD</title>
-    <style>
-        .button{
-            position: relative;
-            left: 150px;
-            top: 300px;
-            width: 100px;
-            height: 75px;
-            font-size: xx-large;
-            background-color: red;
-        }
-        .button1{
-            position: relative;
-            left: -150px;
-            top: 300px;
-            width: 100px;
-            height: 75px;
-            font-size: xx-large;
-            background-color: pink;
-        }
-        body{
-            text-align: center;
-            font-size: xx-large;
-            background-image: url("valentine.jpg");
-            background-size: 200%;
-        }
-        div{
-            background-color: wheat;
-        }
-    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="prank.css">
     <script>
+        var no = 0;
+
         //random number
         //give min and max and this will give you random 
         //number between them
@@ -42,20 +21,47 @@
         }
 
         function move(){
-            var lSide = randomInt(-300, 150)
-            var rSide = randomInt(0, 600)
-            document.getElementById("btn").style.left = lSide + "px";
-            document.getElementById("btn").style.top = rSide + "px";
-            console.log(rSide)
+            if(no < 10){
+                var lSide = randomInt(1, 80)
+                var tSide = randomInt(1, 90)
+                document.getElementById("btn").style.left = lSide + "%";
+                document.getElementById("btn").style.top = tSide + "%";
+                no++;
+            }
+            else if(no == 10){
+                alert("How hard I try\nYou never wanted me T-T\nI guess i need to let you go\nI wish you well.")
+                no++
+            }
+            else if(no < 15){
+                alert("Error 1038\nI wish you loved me TT")
+                no++
+            }
+            else if(no >= 15){
+                alert("Error 607\nBye Bye.")
+                idMain.innerHTML = "";
+                document.body.style.backgroundColor = "black"
+                no++
+            }
+            console.log(no)
         }
         function yes(){
-            alert("Thank you xD")
+            idTxt.innerHTML = "Thank you xD <br> <input type='button' value='click here to chat me xD' onClick='myIg()'>"
+            idbtn.innerHTML = "";
+        }
+        function myIg(){
+            window.open("https://www.instagram.com/aldar0829/")
         }
     </script>
 </head>
 <body>
-    <div>Will you be my Valentine?</div>
-    <button id="btn" class="button" onclick="move()">no</button>
-    <button id="btn" class="button1" onclick="yes()">yes</button>
+    <div id="idMain">
+        <h1>Will you be my Valentine?</h1>
+        <br><br><br>
+        <div class="div" id="idTxt"></div>
+        <div id="idbtn">
+            <button id="btn" class="button" onclick="move()">no</button>
+        </div>
+        <button id="btn1" class="button1" onclick="yes()">yes</button>
+    </div>
 </body>
 </html>
