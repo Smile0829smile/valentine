@@ -29,15 +29,15 @@
                 no++;
             }
             else if(no == 10){
-                alert("How hard I try\nYou never wanted me T-T\nI guess i need to let you go\nI wish you well.")
+                idTxt.innerHTML = "How hard I try\nYou never wanted me T-T\nI guess i need to let you go\nI wish you well."
                 no++
             }
             else if(no < 15){
-                alert("Error 1038\nI wish you loved me TT")
+                idTxt.innerHTML = "Error 1038\nI wish you loved me TT"
                 no++
             }
             else if(no >= 15){
-                alert("Error 607\nBye Bye.")
+                idTxt.innerHTML = "Error 607\nBye Bye."
                 idMain.innerHTML = "";
                 document.body.style.backgroundColor = "black"
                 no++
@@ -45,7 +45,7 @@
             console.log(no)
         }
         function yes(){
-            idTxt.innerHTML = "Thank you xD <br> <input type='button' value='click here to chat me xD' onClick='myIg()'>"
+            idTxt.innerHTML = "Thank you xD<br> <input type='button' value='click here to chat me xD' onClick='myIg()'>"
             idbtn.innerHTML = "";
         }
         function myIg(){
