@@ -23,7 +23,7 @@ h1{
         width: 25%;
         height: 10%;
         font-size: xx-large;
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.322);
     }
     .button1{
         position: absolute;
@@ -32,7 +32,7 @@ h1{
         width: 25%;
         height: 10%;
         font-size: xx-large;
-        background-color: pink;
+        background-color: rgba(255, 192, 203, 0.443);
     }
 }
 
